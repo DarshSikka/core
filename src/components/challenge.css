@@ -15,12 +15,11 @@ textarea {
   height: 200px;
   width: 100%;
 }
-#filediv {
-}
 .upload {
   width: 175px;
   margin: auto;
   color: white;
+  background: black;
   padding: 6px 0px;
   margin-top: 20px;
 }

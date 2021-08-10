@@ -27,12 +27,12 @@ const Challenge = (props) => {
           <legend> Description </legend>
           <textarea placeholder="Describe this challenge"></textarea>
         </fieldset>
+
+        <label for="uploader" className="upload">
+          Upload your challenge!
+        </label>
       </div>
-      <div className="upload">
-        <label for="uploader">Upload your challenge!</label>
-        <input type="file" onChange={fileChange} id="uploader" />
-        <br />
-      </div>
+      <input type="file" onChange={fileChange} id="uploader" />
       <video controls key="updatee">
         {file ? <source src={file} /> : ""}
       </video>
