@@ -1,0 +1,39 @@
+#main {
+  text-align: center;
+}
+.info {
+  width: 50%;
+  margin: auto;
+}
+
+video {
+  width: 800px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+textarea {
+  height: 200px;
+  width: 100%;
+}
+#filediv {
+}
+.upload {
+  width: 175px;
+  margin: auto;
+  color: white;
+  padding: 6px 0px;
+  margin-top: 20px;
+}
+.upload:hover,
+label:hover {
+  cursor: pointer;
+}
+#uploader {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: -1;
+}
+#title {
+  width: 100%;
+}

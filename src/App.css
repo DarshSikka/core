@@ -1,0 +1,64 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(14, 37, 97);
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  width: 100%;
+}
+#signup {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#signup input {
+}
+#signup button {
+  font-size: 30px;
+  border: 2px solid brown;
+  background: rgb(14, 37, 97);
+  color: white;
+}
+#signup input,
+#signup label,
+#signup button {
+  margin-top: 10px;
+}
+#signup form {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+nav {
+  width: 100%;
+}
+.nav-items {
+  text-decoration: none;
+  color: darkorange;
+  margin-right: 10%;
+  font-size: 30px;
+}
+.selected {
+  color: seashell;
+}
+
+#uploader {
+  display: none;
+}
+#fileview {
+  background: grey;
+  font-size: 20px;
+}
+.loginModal {
+  background: red;
+  position: fixed;
+  top: 100px;
+  left: 500px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
