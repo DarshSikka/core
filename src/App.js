@@ -1,9 +1,9 @@
 import "./App.css";
 import Home from "./components/Home";
-import Share from "./components/Share";
 import Challenge from "./components/Challenge";
 import React from "react";
 import Signup from "./components/Signup";
+import ChallengeView from "./components/ChallengeView";
 import { HashRouter as Router, Switch, Route, NavLink } from "react-router-dom";
 import Browse from "./components/Browse";
 import Login from "./components/Login";
@@ -40,7 +40,12 @@ export default function App() {
         >
           <div className="navbar">
             <nav>
-              <NavLink to="/" activeClassName="selected" className="nav-items">
+              <NavLink
+                exact
+                to="/"
+                activeClassName="selected"
+                className="nav-items"
+              >
                 Home
               </NavLink>
               <NavLink
@@ -57,14 +62,6 @@ export default function App() {
                 className="nav-items"
               >
                 Challenge
-              </NavLink>
-
-              <NavLink
-                to="/share"
-                activeClassName="selected"
-                className="nav-items"
-              >
-                Share
               </NavLink>
               <NavLink
                 to="/browse"
@@ -103,20 +100,20 @@ export default function App() {
             </nav>
           </div>
           <Switch>
-            <Route path="/challenge">
+            <Route exact path="/challenge">
               <Challenge user={() => user} />
             </Route>
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/share">
-              <Share />
-            </Route>
-            <Route path="/browse">
+            <Route exact path="/browse">
               <Browse />
             </Route>
             <Route exact path="/signup">
               <Signup />
+            </Route>
+            <Route path="/challenge/:slug">
+              <ChallengeView />
             </Route>
           </Switch>
         </div>
