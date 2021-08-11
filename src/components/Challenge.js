@@ -35,7 +35,7 @@ const Challenge = (props) => {
           email: user.email,
         },
       }),
-    });
+    }).then(resp=>resp.json()).then(res=>alert("uploaded challenge"));
   };
   const fileChange = (e) => {
     if (!file) {
