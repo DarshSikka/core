@@ -8,7 +8,25 @@ import { HashRouter as Router, Switch, Route, NavLink } from "react-router-dom";
 import Browse from "./components/Browse";
 import Login from "./components/Login";
 export default function App() {
+  const [user, setUser] = React.useState();
   const [showLogin, setShowLogin] = React.useState(false);
+  if (localStorage.getItem("usrtok")) {
+    fetch(`${process.env.REACT_APP_API_KEY}/auth/authenticate`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        tok: localStorage.getItem("usrtok"),
+      }),
+    })
+      .then((resp) => resp.json())
+      .then((result) => {
+        if (result.success) {
+          setUser(result.msg);
+        }
+      });
+  }
   return (
     <>
       <Router>
@@ -62,18 +80,31 @@ export default function App() {
               >
                 Signup
               </NavLink>
-              <button
-                className="nav-items"
-                id="login"
-                onClick={() => setShowLogin(true)}
-              >
-                Login
-              </button>
+              {user?.username ? (
+                <button
+                  className="nav-items"
+                  id="login"
+                  onClick={() => {
+                    localStorage.removeItem("usrtok");
+                    window.location.reload();
+                  }}
+                >
+                  Logout ({user.username})
+                </button>
+              ) : (
+                <button
+                  className="nav-items"
+                  id="login"
+                  onClick={() => setShowLogin(true)}
+                >
+                  Login
+                </button>
+              )}
             </nav>
           </div>
           <Switch>
             <Route path="/challenge">
-              <Challenge />
+              <Challenge user={() => user} />
             </Route>
             <Route exact path="/">
               <Home />

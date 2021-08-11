@@ -18,6 +18,11 @@ const Signup = (props) => {
         }),
       })
         .then((resp) => resp.json())
+        .then((res) => {
+          console.log(res);
+          alert("Posted :)");
+        })
+        .then((resp) => resp.json())
         .then((result) => {
           console.log(result);
           if (result._id) {
@@ -52,8 +57,8 @@ const Signup = (props) => {
     }
   };
   return (
-    <div id="signup">
-      <form onSubmit={signup}>
+    <div class="luredown">
+      <form onSubmit={signup} className="signup">
         <label htmlFor="username">Username: </label>
         <input id="username" type="text" />
         <label htmlFor="email">Email:</label>
