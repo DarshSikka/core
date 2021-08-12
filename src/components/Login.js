@@ -5,7 +5,6 @@ export default function Login(props) {
   const [showPass, setShowPass] = React.useState(false);
   const [msg, setMsg] = React.useState({});
   const login = () => {
-    console.log(process.env.REACT_APP_API_KEY);
     fetch(`${process.env.REACT_APP_API_KEY}/auth/login`, {
       method: "POST",
       headers: {

@@ -18,11 +18,6 @@ const Signup = (props) => {
         }),
       })
         .then((resp) => resp.json())
-        .then((res) => {
-          console.log(res);
-          alert("Posted :)");
-        })
-        .then((resp) => resp.json())
         .then((result) => {
           console.log(result);
           if (result._id) {

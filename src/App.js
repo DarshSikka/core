@@ -4,6 +4,8 @@ import Challenge from "./components/Challenge";
 import React from "react";
 import Signup from "./components/Signup";
 import ChallengeView from "./components/ChallengeView";
+import Reply from "./components/Reply";
+import Replies from "./components/Replies";
 import { HashRouter as Router, Switch, Route, NavLink } from "react-router-dom";
 import Browse from "./components/Browse";
 import Login from "./components/Login";
@@ -114,6 +116,12 @@ export default function App() {
             </Route>
             <Route path="/challenge/:slug">
               <ChallengeView />
+            </Route>
+            <Route path="/reply/:slug">
+              <Reply user={() => user} />
+            </Route>
+            <Route path="/replies/:slug">
+              <Replies />
             </Route>
           </Switch>
         </div>
