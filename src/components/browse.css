@@ -1,0 +1,19 @@
+.input-fill {
+  background: #eaeaea;
+  color: #333;
+  width: 200px;
+  height: 29px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+.browse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+.challenger {
+  text-decoration: none;
+}

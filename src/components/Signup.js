@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./signup.css"
 const Signup = (props) => {
   const [msg, setMsg] = useState({});
   const signup = (e) => {
@@ -53,19 +54,29 @@ const Signup = (props) => {
   };
   return (
     <div class="luredown">
-      <form onSubmit={signup} className="signup">
-        <label htmlFor="username">Username: </label>
-        <input id="username" type="text" />
-        <label htmlFor="email">Email:</label>
-        <input id="email" type="email" />
-        <label htmlFor="name">Name: </label>
-        <input id="name" type="text" />
-        <label htmlFor="password">Password: </label>
-        <input type="password" id="password" />
-        <label htmlFor="confirm">Confirm password:</label>
-        <input type="password" id="confirm" />
-        <button type="submit">Submit</button>
-      </form>
+      <div className="container-sign">
+      <h1 className="sign-up">Sign Up</h1>
+      <br></br>
+        <form onSubmit={signup} className="signup">
+        
+          <label className="label-sign" htmlFor="username">Username </label>
+          <input className="input-fill3" id="username" placeholder="type your username" type="text" />
+          <br />
+          <label className="label-sign"  htmlFor="email">Email</label>
+          <input className="input-fill3" id="email" placeholder="type your email" type="email" />
+          <br />
+          <label className="label-sign" htmlFor="name">Name </label>
+          <input className="input-fill3" id="name" type="text" placeholder="type your name"/>
+          <br />
+          <label className="label-sign" htmlFor="password">Password </label>
+          <input className="input-fill3" type="password"placeholder="type your password"  id="password" />
+          <br />
+          <label className="label-sign" htmlFor="confirm">Confirm password</label>
+          <input className="input-fill3" type="password"placeholder="type your comfirm password"  id="confirm" />
+          <br />
+          <button className="submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
       {msg?.messages?.map((ele) => {
         return <h4 style={{ color: msg.error ? "red" : "green" }}>{ele}</h4>;
       })}

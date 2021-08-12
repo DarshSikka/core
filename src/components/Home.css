@@ -9,6 +9,10 @@
   border-radius: 20px;
   margin-left: 20px;
 }
+.a {
+  width: 90px;
+  height: 90px;
+}
 #body h1 {
   font-family: Alegreya Sans SC;
   font-style: normal;
@@ -16,6 +20,26 @@
   font-size: 96px;
 
   color: #000000;
+}
+.containGet {
+  display: flex;
+  justify-content: center;
+}
+.mainHeading {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+}
+.GetStarted {
+  border: 0px solid transparent;
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+  background: blue;
+  color: white;
+  font-family: Actor;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 2rem;
 }
 #body p {
   font-size: 24px;
@@ -43,5 +67,10 @@
   }
 }
 #illus {
-  margin-top: 200px;
+  height: 700px;
+  width: 1360px;
+  position: absolute;
+  top: 1rem;
+  left: 20rem;
 }
+/* 1920/1080 */

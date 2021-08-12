@@ -9,17 +9,14 @@ const Challenge = (props) => {
     setUser(props.user() || {});
   }, [props]);
   const upload = () => {
-    console.log("Calling upload");
-    console.log({
-      title,
-      description,
-      video: file,
-      author: {
-        name: user.name,
-        username: user.username,
-        email: user.email,
-      },
-    });
+    if (!file) {
+      return alert("Please upload a file");
+    } else if (!title) {
+      return alert("Please add a title");
+    } else if (!description) {
+      return alert("Please add a description");
+    }
+    props.unClosable("Your challenge is processing, kindly wait");
     fetch(`${process.env.REACT_APP_API_KEY}/posts/new`, {
       method: "POST",
       headers: {
@@ -37,7 +34,11 @@ const Challenge = (props) => {
       }),
     })
       .then((resp) => resp.json())
-      .then((res) => alert("uploaded challenge"));
+      .then((res) => {
+        alert("uploaded challenge");
+        props.closeUnclosable();
+        window.location = "/#/browse";
+      });
   };
   const fileChange = (e) => {
     if (!file) {
@@ -56,9 +57,11 @@ const Challenge = (props) => {
     <div className="luredown">
       {user.username ? (
         <>
-          <h1>Post a public challenge</h1>
+          <div className="chh">
+            <h1>Post a public challenge</h1>
+          </div>
           <div className="info">
-            <fieldset>
+            <div className="groupField">
               <legend>Title</legend>
               <input
                 type="text"
@@ -67,29 +70,34 @@ const Challenge = (props) => {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
-            </fieldset>
-            <fieldset>
+            </div>
+            <div className="groupField" style={{ marginBottom: "2rem" }}>
               <legend> Description </legend>
               <textarea
+                id="description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Describe this challenge"
               ></textarea>
-            </fieldset>
+            </div>
+            <div className="center">
+              <label for="uploader" className="upload">
+                Upload your challenge!
+              </label>
+              <br />
 
-            <label for="uploader" className="upload">
-              Upload your challenge!
-            </label>
-            <br />
-            <button className="challengeSubmit" onClick={upload}>
-              Submit
-            </button>
+              <button className="groupField" id="submitButton" onClick={upload}>
+                Submit
+              </button>
+            </div>
           </div>
           <input type="file" onChange={fileChange} id="uploader" />
           <br />
-          <video controls key="updatee">
-            {file ? <source src={file} /> : ""}
-          </video>
+          <div className="videoContainer">
+            <video controls key="updatee">
+              {file ? <source src={file} /> : ""}
+            </video>
+          </div>
         </>
       ) : (
         <>

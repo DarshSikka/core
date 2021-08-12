@@ -25,10 +25,16 @@ const ChallengeView = (props) => {
             {chall?._doc?.author?.name} {chall._doc?.author?.username}
           </h2>
           <h4>{chall?._doc.views} views</h4>
+          <p>{chall?._doc.description}</p>
           <video controls width="500">
             {chall.url[0]?.uri ? <source src={chall.url[0]?.uri} /> : ""}
           </video>
+          <br />
           <Link to={`/reply/${chall?._doc?._id}`}>I have what it takes</Link>
+          <br />
+          <Link to={`/replies/${chall?._doc?._id}`}>
+            Replies to that challenge
+          </Link>
         </div>
       ) : (
         <div className="luredown">

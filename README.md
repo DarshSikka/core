@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Mental Yoga Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Idea
 
-## Available Scripts
+##### Mental stress and anxiety are very commonly reported disorders in school students specially during corona times, when they are not leaving the house and meeting their friends at school. Yoga is a form of mental excercize well known to reduce stress.We have created a challenge sharing portal where one can create open challenges related to mental health, mainly including mental yoga and stress relieving excercise postures. One can reply to these challenge videos with own video doing the same posture or challenging friends with a new pose. We believe this target based activity will be a fun filled stress buster for all across ages.
 
-In the project directory, you can run:
+## Functionality
 
-### `npm start`
+- ##### This application contains Login/signup i.e Authentication. You can log in and sign up through the buttons on the navbar
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* ##### There is the challenge page for uploading your yoga challenge/stress releive, you can add a title and a description to this challenge
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* ##### There is a browse page where you can look for challenges uploaded by others, you can also search for challenges here. Clicking on a challenge will navigate to the view challenge page of that challenge, generated using dynamic URLs, so you can even share that link
 
-### `npm test`
+* ##### The dynamic URL view challenge page contains the details about a challenge and a _I have what it takes_ option to reply to that challenge. You can do a recording and send your reply on the dynamic URL page it navigates you. You can also click on the "View tries" button to navigate to the dynamic URL page to view challenge replies
+* ##### In the dynamic URL /replies/:slug you can view how other people did on this challenge, if you tried it too, you will get your name there also
+* ##### This also has the basic feature of viewing tips to stay mentally healthy, this page can be found in the navbar too
+* ##### At last there is an About us page where there are some details about all the team members who made the product
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Stack
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- ##### This application is written in MERN stack
+- ##### MERN stands for MongoDB Express React and Node.js
+- ##### This app also uses SQLite3 to store large, view only data, mainly videos

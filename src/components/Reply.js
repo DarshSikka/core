@@ -16,12 +16,13 @@ export default function Reply(props) {
   };
   const submit = () => {
     if (!file) {
-      alert("Please select a file"); //modal
-    } else if (!description) {
-      alert("Please write atleast some comments about this");
+      alert("Please select a file");
     } else {
       // hold them here and show some message it is loading
-      alert("uploading...");
+      props.unClosable(
+        "Uploading......",
+        "loading the reply into our database"
+      );
       fetch(`${process.env.REACT_APP_API_KEY}/posts/reply`, {
         method: "POST",
         headers: {
@@ -35,8 +36,8 @@ export default function Reply(props) {
       })
         .then((resp) => resp.text())
         .then((result) => {
-          // loaded
-          alert("Done, replied to that challenge");
+          props.closeUnclosable();
+          window.location = `/#/replies/${slug}`;
         });
     }
   };

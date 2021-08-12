@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Alegreya+Sans+SC:wght@700&display=swap");
+#heading {
+  font-size: 86px;
+  text-align: center;
+  font-family: Actor;
+}
+.container {
+  padding: 20px;
+}
+.container img {
+  margin-right: 20px;
+  border-radius: 105px;
+  width: 150px;
+  height: 150px;
+}
+#about {
+  font-size: 30px;
+}
+.aboutfooter {
+  display: flex;
+}
+.Info {
+  border: 1px solid black;
+  height: 175px;
+  margin-bottom: 10px;
+  display: flex;
+  padding: 20px 20px;
+  justify-content: space-around;
+}
+.Info p {
+  font-size: 20px;
+}
