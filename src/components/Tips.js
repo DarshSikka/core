@@ -13,7 +13,7 @@ export default function Tips(props) {
   const [content, setContent] = React.useState("");
   return (
     <>
-      <div>
+      <div style={{ marginTop: "20px" }}>
         <br></br>
         <div className="text">
           <h1>
