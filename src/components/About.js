@@ -7,7 +7,7 @@ import Stress2 from "./Stress2.jpeg";
 import "./about.css";
 export default function About() {
   return (
-    <div>
+    <div className="luredown">
       <div className="container">
         <h1 id="heading">About us</h1>
         <p id="about">

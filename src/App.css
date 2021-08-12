@@ -11,6 +11,7 @@
   top: 0px;
   width: 100%;
   padding: 20px;
+  height: 50px;
 }
 #login {
   padding: 2px 10px;
@@ -21,6 +22,7 @@
   font-size: 20px;
   float: right;
   color: var(--navbar-items-color);
+  outline: none;
 }
 #login:hover {
   background: #7c0321;
@@ -76,6 +78,9 @@ nav {
   left: 20%;
   z-index: 999999999;
   color: black;
+  padding: 20px 20px;
+  border: 1px solid black;
+  border-radius: 20px;
 }
 .headingContainer {
   display: flex;

@@ -63,10 +63,6 @@ export default function Tips(props) {
             <img src={illus} alt="error"></img>
             <div class="dg">
               <h3>How to come out of depression?</h3>
-              <p>
-                Lorem ipsum dolor I am too lazy to even type lorem or generate
-                it
-              </p>
             </div>
           </div>{" "}
           <div
